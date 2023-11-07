@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de CV</title>
+    <link href="Formulaire CSS.css" rel="stylesheet" type="text/css"/>
+    <script src="Formulaire Js.js"></script>
+</head>
+
+<body>
+    <h1>Formulaire de CV</h1>
+    <form id="cvForm" action="Untitled-.html" method="get" onsubmit="return checkAll();">
+        <div class="left-column">
+        <fieldset>
+        <legend><strong>Informations personnelles :</strong></legend>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" ><br>
+        <label for="titre">Titre de CV :</label>
+        <input type="text" id="titre" name="titre" ><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" ><br>
+        <label for="text">Genre :</label>
+        <label for="genre_homme">
+            <input type="radio" id="genre_homme" name="genre" value="homme"> Homme
+        </label>
+        
+        <label for="genre_femme">
+            <input type="radio" id="genre_femme" name="genre" value="femme"> Femme
+        </label>        
+        <br>
+        <label for="date">Sélectionnez votre date de naissance :</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <label for="text">Saisir votre adresse émail: </label>
+        <input type="email" id="email" name="email" placeholder="azerty@demo.com">
+        <br>
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse">
+        <br>
+        <label for="document">Ajouter une image :</label>
+        <input type="file" id="image" name="image">
+        </fieldset>
+        <br/>
+        <fieldset>
+        <legend><strong>Formation :</strong></legend>
+        <label for="formation">Formation :</label>
+        <select id="formation" name="formation" >
+            <option value="master">Master</option>
+            <option value="diplome_ingenieur">Diplôme d'ingénieur</option>
+            <option value="doctorat">Doctorat</option>
+        </select><br>
+        <label for="Ecole">Ecole :</label>
+        <input type="text" id="Ecole" name="Ecole" ><br>
+        <label for="Filière">Filière :</label>
+        <input type="text" id="Filière" name="Filière" ><br>
+        <br/>
+        <label for="autre">Autre :</label>
+        <input type="text" id="autre" name="autre" ><br>
+        </fieldset>
+        <br/>
+        <fieldset>
+        <legend><strong>Compétences personnelles :</strong></legend>
+        <label for="Communication">
+            <input type="checkbox" id="Communication" name="competences_personneles" value="Communication"> Communication
+        </label>
+        
+        <label for="Travail en équipe">
+            <input type="checkbox" id="Travail en équipe" name="competences_personneles" value="Travail en équipe"> Travail en équipe
+        </label>
+        
+        <label for="Fléxibilité">
+            <input type="checkbox" id="Fléxibilité" name="competences_personneles" value="Fléxibilité"> Fléxibilité
+        </label>
+        
+        <label for="Confiance">
+            <input type="checkbox" id="Confiance" name="competences_personneles" value="Confiance"> Confiance
+        </label>
+        
+        <label for="Self-management">
+            <input type="checkbox" id="Self-management" name="competences_personneles" value="Self-management"> Self-management
+        </label>
+        
+        <label for="Résolution des problèmes">
+            <input type="checkbox" id="Résolution des problèmes" name="competences_personneles" value="Résolution des problèmes"> Résolution des problèmes
+        </label>
+        <br/>
+        </fieldset>
+        <br/>
+        <fieldset>
+        <legend><strong>Objectif Professionnel :</strong></legend>
+        <label for="objectif">Objectif Professionnel :</label>
+        <textarea id="objectif" name="objectif" rows="7" cols="120" ></textarea><br>
+        </fieldset>
+        <br/>
+        <fieldset>
+        <legend><strong>Autres :</strong></legend>
+        <label for="Autres">Autres :</label>
+        <textarea id="Autres" name="Autres" rows="4" cols="120" ></textarea><br>
+        </fieldset>
+        </div>
+        <div class="right-column">
+        <fieldset>
+        <legend><strong>Compétences linguistiques:</strong></legend>
+        <br/>
+        <label for="anglais"><strong>Anglais :</strong></label>
+        <input type="range" id="niveauan" name="niveauan" min="1" max="10" step="1" />
+        <br/>
+        <label for="Français"><strong>Français :</strong></label>
+        <input type="range" id="niveaufr"name="niveaufr" min="1" max="10" step="1" />
+        <br/>
+        <label for="Arabe"><strong>Arabe :</strong></label>
+        <input type="range" id="niveauar" name="niveauar" min="1" max="10" step="1" />
+        <br/>
+        <label for="Espagnol"><strong>Espagnol :</strong></label>
+        <input type="range" id="niveaues" name="niveaues" min="1" max="10" step="1" />
+        <br/>
+        <label for="Japonais"><strong>Japonais :</strong></label>
+        <input type="range" id="niveauj" name="niveauj" min="1" max="10" step="1" />
+        <br/>
+        <label for="text"><strong>Autre langue :</strong></label>
+        <input type="text" id="Autre langue" name="Autre langue" placeholder="Ex: Chinois" >
+        <label for="text"><strong>Niveau :</strong></label>
+        <input type="range" name="niveau" min="débutant" max="courant" step="1" />
+        <br/>
+        </fieldset>
+        <br/>
+        <fieldset>
+        <legend><strong>Compétences techniques :</strong></legend>
+        <label for="Tools"><strong>Outils : </strong></label>
+        <br>
+        <label for="MS">
+            <input type="checkbox" id="MS" name="competences_techniques" value="MS Visual Studio"> MS Visual Studio
+        </label>
+        
+        <label for="Spring">
+            <input type="checkbox" id="Spring" name="competences_techniques" value="Spring"> Spring
+        </label>
+        
+        <label for="JUnit">
+            <input type="checkbox" id="JUnit" name="competences_techniques" value="JUnit"> JUnit
+        </label>
+        
+        <label for="Jbuilder">
+            <input type="checkbox" id="Jbuilder" name="competences_techniques" value="Jbuilder"> Jbuilder
+        </label>
+        
+        <label for="adobe">
+            <input type="checkbox" id="adobe" name="competences_techniques" value="Adobe Creative Cloud"> Adobe Creative Cloud
+        </label>
+        
+        <label for="Microsoft Office">
+            <input type="checkbox" id="Microsoft Office" name="competences_techniques" value="Microsoft Office"> Microsoft Office
+        </label>        
+        <br><br>
+        <label for="programming languages"><strong>Languages de programmation : </strong></label>
+        <br>
+        <label for="java">
+            <input type="checkbox" id="java" name="competences_techniques" value="Java/J2EE"> Java/J2EE
+        </label>
+        
+        <label for="html5">
+            <input type="checkbox" id="html5" name="competences_techniques" value="HTML5 & CSS3"> HTML5 & CSS3
+        </label>
+        
+        <label for="C">
+            <input type="checkbox" id="C" name="competences_techniques" value="C,C+,C++ & C#"> C,C+,C++ & C#
+        </label>
+        
+        <label for="JavaScript">
+            <input type="checkbox" id="JavaScript" name="competences_techniques" value="JavaScript"> JavaScript
+        </label>
+        
+        <label for="PY">
+            <input type="checkbox" id="PY" name="competences_techniques" value="Python"> Python
+        </label>
+        
+        <label for="R">
+            <input type="checkbox" id="R" name="competences_techniques" value="R"> R
+        </label>
+        
+        <label for="PHP">
+            <input type="checkbox" id="PHP" name="competences_techniques" value="PHP"> PHP
+        </label>        
+        <br><br>
+        <label for="Database management"><strong>Gestion de base de données : </strong></label>
+        <br>
+        <label for="Oracle 8.x/9.x">
+            <input type="checkbox" id="Oracle_8_9" name="competences_techniques" value="Oracle 8.x/9.x"> Oracle 8.x/9.x
+        </label>
+        
+        <label for="SQL Server 2008">
+            <input type="checkbox" id="SQL_Server_2008" name="competences_techniques" value="SQL Server 2008"> SQL Server 2008
+        </label>
+        
+        <label for="MS Access">
+            <input type="checkbox" id="MS_Access" name="competences_techniques" value="MS Access"> MS Access
+        </label>
+        
+        <label for="MySQL">
+            <input type="checkbox" id="MySQL" name="competences_techniques" value="MySQL"> MySQL
+        </label>        
+        <br><br>
+        <label for="Cloud-Based Technologies"><strong>Technologies du Cloud : </strong></label>
+        <br>
+        <label for="AWS">
+            <input type="checkbox" id="AWS" name="competences_techniques" value="AWS"> AWS
+        </label>
+        
+        <label for="Docker">
+            <input type="checkbox" id="Docker" name="competences_techniques" value="Docker"> Docker
+        </label>
+        
+        <label for="Spark">
+            <input type="checkbox" id="Spark" name="competences_techniques" value="Spark"> Spark
+        </label>        
+        </fieldset>
+        <br/>
+        <fieldset>
+        <input type="submit" value="Soumettre">
+        <input type="reset" value="Annuler">
+        </fieldset>
+        </div>
+    </form>
+</body>
+<footer>
+    <p><small>Edité par : Yassir ELHANAFI et Abderrahmane BOULMAKOUL </small></p>
+    <p><small>Dernière mise à jour : 11/10/2023</small></p>
+    <p><small>&copy; 2023 ELHANAFI&BOULMAKOUL. Tous droits réservés.</small></p>
+</footer>
+
+</html>
